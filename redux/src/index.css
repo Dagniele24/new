@@ -1,0 +1,71 @@
+body{
+  background-image: url(./public/mammt.jpg);
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size:100%;
+  height: 95vh;
+}
+  .custom-city{
+    margin-top: 150px;
+    text-align: center;
+    font-size: 40px;
+  }
+  .custom-center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 10px;
+    }
+  .custom-cn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap ;
+    padding-top: 50px;
+    margin-left: 30%;
+    margin-right: 30%;
+  }
+
+  .custom-form  {
+    background-color: antiquewhite;
+    border: 3px solid purple;
+    border-radius: 20px;
+    width: 95%;
+    height: 4vh;
+    padding-left: 10px;
+    padding-right: 0px;
+  }
+  .custom-form:focus {
+    border-color: purple;
+  }
+  .custom-colbutton{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-top: 10px;
+    padding-left: 5px;
+  }
+  .custom-button{
+    background-color: antiquewhite; 
+    border-radius: 20px;
+    border: 3px solid purple;
+    height: 30px;
+    width: 60px
+  }
+  .card1{
+    background-color: antiquewhite;
+    width: 200px;
+    height: 70px;
+    border: 3px solid purple;
+    border-radius:  35px;
+    text-align: center;
+    margin-right: 30px;
+    margin-left:30px;
+    margin-top: 30px;
+  }
+  h1{
+    margin: 0px;
+  }
+  p{
+    margin-bottom: 0px;
+  }
