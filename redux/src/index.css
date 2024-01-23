@@ -1,9 +1,101 @@
 body{
-  background-image: url(./public/mammt.jpg);
+  background-image: url(./public/mammt2.jpg);
   background-repeat:no-repeat;
   background-position: center;
-  background-size:100%;
+  background-size:200%;
   height: 95vh;
+}
+@media (max-width: 1350px) {
+  body {
+    background-size:200%;
+  }
+  div .card1{
+    width: 100px;
+    height: 80px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  p .card1{
+   display: flex;
+   flex-wrap: wrap; 
+  }
+
+  .ml-md-auto {
+    margin-left: 0 !important;
+  }
+}
+@media (max-width: 800px) {
+  body {
+    background-image: url(./public/mammt3.jpg);
+    background-size:100vh;
+  }
+  h1{
+    font-size: smaller;
+  }
+  div .card1{
+    width: 70px;
+    height: 90px;
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  p .card1{
+   display: flex;
+   flex-wrap: wrap; 
+  }
+  div .custom-cn{
+    padding-top: 0px;
+  }
+  .ml-md-auto {
+    margin-left: 0 !important;
+  }
+}
+@media (max-width: 600px) {
+  body {
+    background-image: url(./public/mammt3.jpg);
+    background-size:100vh;
+  }
+  h1{
+    font-size: smaller;
+  }
+  div .card1{
+    width: 60px;
+    height: 90px;
+    margin-top: 10px;
+    margin-right: 15px;
+    margin-left: 15px;
+    
+  }
+  div .custom-cn{
+    padding-top: 0px;
+  }
+
+  .ml-md-auto {
+    margin-left: 0 !important;
+  }
+}
+@media (max-width: 500px) {
+  body {
+    background-image: url(./public/mammt3.jpg);
+    background-size:100vh;
+  }
+  h1{
+    font-size: smaller;
+  }
+  div .card1{
+    width: 60px;
+    height: 90px;
+    margin-top: 0px;
+    margin-right: 4px;
+    margin-left: 4px;
+  }
+  div .custom-cn{
+    padding-top: 0px;
+  }
+
+  .ml-md-auto {
+    margin-left: 0 !important;
+  }
 }
   .custom-city{
     margin-top: 150px;

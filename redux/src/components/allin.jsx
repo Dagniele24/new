@@ -2,7 +2,7 @@ import { Navbar, Form, Row, Col, Button } from "react-bootstrap";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setCity, setWeatherData } from "../redux/actions";
-import '../index.css';
+import "../index.css";
 
 function Navbars() {
   const dispatch = useDispatch();
@@ -39,11 +39,20 @@ function Navbars() {
 
   return (
     <div>
-      <Navbar className="bg-body-tertiary  custom-center">
-        <Form onSubmit={Submitto}>
-        <Row className="flex-wrap">
+      <Navbar className="bg-body-tertiary custom-center" expand="md">
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Form onSubmit={Submitto} className="mx-auto">
+          <Row className="flex-wrap">
             <Col xs="12" md="auto">
-              <Form.Control type="text" name="citta" placeholder="Digita la città da cercare" className="mr-sm-2 custom-form button" id="citta" value={city} onChange={CambiaCity}/>
+              <Form.Control
+                type="text"
+                name="citta"
+                placeholder="Digita la città da cercare"
+                className="mr-sm-2 custom-form button"
+                id="citta"
+                value={city}
+                onChange={CambiaCity}
+              />
             </Col>
             <Col xs="12" md="auto" className="custom-colbutton">
               <Button type="submit" className="custom-button">
@@ -52,16 +61,17 @@ function Navbars() {
             </Col>
           </Row>
         </Form>
+      </Navbar.Collapse>
       </Navbar>
       <div className="custom-city">
         <h1>{weatherData?.name || "-"}</h1> {/* fa apparire a schermo il nome della città oppure se quel campo non è stato ancora caricato mette un semplice trattino finchè non viene scelta la città */}       
       </div>
       <div className='custom-cn'>
         <div className='card1' /*! SEZIONE PER LA LONGITUDINE */>
-            {weatherData && (<p><b>Longitudine:</b> <br /> {weatherData.coord.lon} <b>°</b></p>)}
+            {weatherData && (<p><b>Long,:</b> <br /> {weatherData.coord.lon} <b>°</b></p>)}
         </div>
         <div className='card1' /*! SEZIONE PER LA LATITUDINE! */>
-            {weatherData && (<p><b>Latitudine:</b> <br /> {weatherData.coord.lat} <b>°</b> </p>)}
+            {weatherData && (<p><b>Lat.:</b> <br /> {weatherData.coord.lat} <b>°</b> </p>)}
         </div>
         <div className='card1' /*! SEZIONE PER LE NUVOLE! */>
             {weatherData && (<p><b>Nuvole:</b> {weatherData.clouds.all}<b>%</b></p>) }
@@ -83,7 +93,7 @@ function Navbars() {
             </svg>
         </div>
         <div className='card1' /*! SEZIONE PER LA TEMPERATURA! */>
-            {weatherData && (<p><b>Temperatura:</b> {weatherData.main.temp} <b>°</b></p>)}
+            {weatherData && (<p><b>Temp.:</b> {weatherData.main.temp} <b>°</b></p>)}
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi bi-thermometer-half" viewBox="0 0 16 16">
             <path d="M9.5 12.5a1.5 1.5 0 1 1-2-1.415V6.5a.5.5 0 0 1 1 0v4.585a1.5 1.5 0 0 1 1 1.415"/>
             <path d="M5.5 2.5a2.5 2.5 0 0 1 5 0v7.55a3.5 3.5 0 1 1-5 0zM8 1a1.5 1.5 0 0 0-1.5 1.5v7.987l-.167.15a2.5 2.5 0 1 0 3.333 0l-.166-.15V2.5A1.5 1.5 0 0 0 8 1"/>
